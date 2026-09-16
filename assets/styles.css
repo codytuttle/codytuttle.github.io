@@ -87,11 +87,17 @@ nav a.active {
 }
 
 .intro {
+  padding: 40px 0 56px;
+}
+
+.intro-copy {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 32px;
+  grid-template-areas:
+    "title portrait"
+    "text portrait";
+  column-gap: 32px;
   align-items: center;
-  padding: 40px 0 56px;
 }
 
 h1,
@@ -102,12 +108,16 @@ p {
 }
 
 .intro h1 {
+  grid-area: title;
+  align-self: end;
   margin-bottom: 16px;
   font-size: 22px;
   font-weight: 700;
 }
 
 .home-text {
+  grid-area: text;
+  align-self: start;
   font-size: 14px;
 }
 
@@ -116,6 +126,7 @@ p {
 }
 
 .portrait {
+  grid-area: portrait;
   width: 150px;
   margin: 0;
 }
@@ -272,13 +283,20 @@ footer p {
 
 @media (max-width: 560px) {
   .intro {
-    grid-template-columns: 1fr;
-    gap: 24px;
     padding: 28px 0 40px;
+  }
+
+  .intro-copy {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "portrait"
+      "text";
   }
 
   .portrait {
     width: 120px;
+    margin-bottom: 24px;
   }
 
   footer {

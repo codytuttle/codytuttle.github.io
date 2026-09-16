@@ -119,6 +119,7 @@ p {
   grid-area: text;
   align-self: start;
   font-size: 14px;
+  text-align: justify;
 }
 
 .home-text p {
@@ -294,7 +295,13 @@ footer p {
       "text";
   }
 
+  .intro h1 {
+    justify-self: center;
+    text-align: center;
+  }
+
   .portrait {
+    justify-self: center;
     width: 120px;
     margin-bottom: 24px;
   }

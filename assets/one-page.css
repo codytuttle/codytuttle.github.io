@@ -1,0 +1,112 @@
+.one-page-main {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+.first-one-page .one-page-main {
+  max-width: 800px;
+}
+
+.one-page-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-areas:
+    "title portrait"
+    "bio portrait";
+  column-gap: 32px;
+  align-items: center;
+  padding: 36px 0 42px;
+  scroll-margin-top: 16px;
+}
+
+.first-one-page .one-page-intro {
+  padding-bottom: 34px;
+}
+
+.one-page-intro h1 {
+  grid-area: title;
+  align-self: end;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.one-page-bio {
+  grid-area: bio;
+  align-self: start;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.one-page-bio p {
+  margin-bottom: 14px;
+}
+
+.one-page-portrait {
+  grid-area: portrait;
+  width: 150px;
+  margin: 0;
+}
+
+.one-page-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.one-page-research {
+  padding-top: 4px;
+  scroll-margin-top: 16px;
+}
+
+.one-page-main .toggle-mark {
+  width: 7px;
+  height: 7px;
+  margin-top: -3px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.one-page-main .toggle-mark::before,
+.one-page-main .toggle-mark::after {
+  display: none;
+}
+
+.one-page-main .abstract-toggle[aria-expanded="true"] .toggle-mark {
+  margin-top: 3px;
+  transform: rotate(225deg);
+}
+
+@media (max-width: 560px) {
+  .one-page-intro {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "portrait"
+      "bio";
+    padding: 28px 0 36px;
+  }
+
+  .one-page-intro h1 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .one-page-portrait {
+    justify-self: center;
+    width: 120px;
+    margin-bottom: 24px;
+  }
+
+  .first-one-page .one-page-portrait {
+    width: 210px;
+  }
+
+  .first-one-page .one-page-intro {
+    padding-bottom: 28px;
+  }
+}

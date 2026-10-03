@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  color: #232323;
+  background: #fbfbfa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  color: #911a1a;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #671010;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  padding: 6px;
+  color: #ffffff;
+  background: #000000;
+}
+
+.academic-page {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 16px 48px;
+  margin: 0 auto;
+}
+
+.academic-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.academic-sidebar {
+  padding-right: 28px;
+  border-right: 1px solid #d8d8d4;
+  color: #353535;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.academic-sidebar h1 {
+  margin-bottom: 10px;
+  color: #232323;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.academic-portrait {
+  width: 145px;
+  margin: 0 0 16px;
+}
+
+.academic-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.academic-role {
+  margin-bottom: 14px;
+  white-space: nowrap;
+}
+
+.academic-links {
+  padding: 13px 0 0;
+  margin: 0;
+  border-top: 1px solid #d8d8d4;
+  list-style: none;
+}
+
+.academic-links li {
+  margin-bottom: 5px;
+}
+
+.academic-links a {
+  white-space: nowrap;
+}
+
+.academic-content {
+  min-width: 0;
+}
+
+.one-page-research {
+  padding-top: 4px;
+}
+
+.paper-section {
+  margin-bottom: 28px;
+}
+
+.section-heading {
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.paper {
+  margin-bottom: 16px;
+}
+
+.paper-row {
+  position: relative;
+}
+
+.paper-copy {
+  padding-right: 32px;
+}
+
+.paper-copy h3 {
+  margin-bottom: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.paper-copy h3 a {
+  color: #911a1a;
+  text-decoration: none;
+}
+
+.paper-copy h3 a:hover,
+.paper-copy h3 a:focus-visible {
+  text-decoration: underline;
+}
+
+.paper-meta,
+.paper-status,
+.paper-links {
+  margin-bottom: 1px;
+  color: #4a4a4a;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.paper-status cite {
+  font-style: italic;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 3px;
+}
+
+.abstract-details {
+  margin: 0;
+}
+
+.abstract-toggle {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #333333;
+  cursor: pointer;
+  list-style: none;
+  place-items: center;
+}
+
+.abstract-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.abstract-toggle::marker {
+  content: "";
+}
+
+.abstract-toggle:hover {
+  color: #911a1a;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.toggle-mark {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.abstract-details[open] .toggle-mark {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.abstract {
+  width: 100%;
+  padding: 8px 0 2px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.abstract p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .academic-page {
+    padding-top: 28px;
+  }
+
+  .academic-layout {
+    display: block;
+  }
+
+  .academic-sidebar {
+    max-width: 440px;
+    padding: 0 0 28px;
+    margin: 0 auto 30px;
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d4;
+    text-align: center;
+  }
+
+  .academic-sidebar h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .academic-portrait {
+    width: 210px;
+    margin: 0 auto 20px;
+  }
+
+  .academic-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .academic-links li {
+    margin-bottom: 0;
+  }
+}
